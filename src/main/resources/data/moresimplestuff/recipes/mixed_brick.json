@@ -1,0 +1,29 @@
+{
+ 	"type": "minecraft:crafting_shaped",
+ 	
+ 	"pattern":
+ 	[
+ 		"BD",
+ 		"DB"
+ 	],
+ 	
+ 	"key": 
+ 	{
+ 		"D":
+ 		{
+ 			"item": "minecraft:brick"
+ 		},
+ 		
+ 		
+ 		"B":
+ 		{
+ 			"item": "moreblocks:burned_brick"
+ 		}
+ 	},
+ 	
+ 	"result":
+ 	{
+ 		"item": "moreblocks:mixed",
+ 		"count": 4
+ 	}
+}

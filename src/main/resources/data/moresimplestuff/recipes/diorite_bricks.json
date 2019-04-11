@@ -1,0 +1,24 @@
+{
+ 	"type": "minecraft:crafting_shaped",
+ 	
+ 	"pattern":
+ 	[
+ 		"DD",
+ 		"DD"
+ 	],
+ 	
+ 	"key": 
+ 	{
+ 		"D":
+ 		{
+ 			"item": "minecraft:stone",
+			"data": 4
+ 		}
+ 	},
+ 	
+ 	"result":
+ 	{
+ 		"item": "moreblocks:diorite_bricks",
+ 		"count": 4
+ 	}
+}

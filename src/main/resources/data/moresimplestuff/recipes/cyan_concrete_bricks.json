@@ -1,0 +1,25 @@
+{
+ 	"type": "minecraft:crafting_shaped",
+ 	
+ 	"pattern":
+ 	[
+ 		"   ",
+ 		" DD",
+ 		" DD"
+ 	],
+ 	
+ 	"key": 
+ 	{
+ 		"D":
+ 		{
+ 			"item": "minecraft:concrete",
+ 			"data": 9
+ 		}
+ 	},
+ 	
+ 	"result":
+ 	{
+ 		"item": "moreblocks:cyan_concrete_bricks",
+ 		"count": 4
+ 	}
+}

@@ -1,0 +1,24 @@
+{
+ 	"type": "minecraft:crafting_shaped",
+ 	
+ 	"pattern":
+ 	[
+ 		"DD",
+ 		"DD"
+ 	],
+ 	
+ 	"key": 
+ 	{
+ 		"D":
+ 		{
+ 			"item": "minecraft:stone",
+			"data": 6
+ 		}
+ 	},
+ 	
+ 	"result":
+ 	{
+ 		"item": "moreblocks:andesite_bricks",
+ 		"count": 4
+ 	}
+}

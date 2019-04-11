@@ -1,0 +1,24 @@
+{
+ 	"type": "minecraft:crafting_shaped",
+ 	
+ 	"pattern":
+ 	[
+ 		" DD",
+ 		" DD"
+ 	],
+ 	
+ 	"key": 
+ 	{
+ 		"D":
+ 		{
+ 			"item": "minecraft:concrete",
+ 			"data": 8
+ 		}
+ 	},
+ 	
+ 	"result":
+ 	{
+ 		"item": "moreblocks:silver_concrete_bricks",
+ 		"count": 4
+ 	}
+}

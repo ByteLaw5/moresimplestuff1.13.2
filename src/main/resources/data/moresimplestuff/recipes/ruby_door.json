@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "doors",
+  "ingredients": [
+    {
+      "item": "moreblocks:stone_door"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "moreblocks:ruby_door"
+  }
+}

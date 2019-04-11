@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "minecraft:diamond_shovel"
+	},
+	"result": "moresimplestuff:diamond_nugget",
+	"experience": 0.1,
+	"cookingtime": 500
+}

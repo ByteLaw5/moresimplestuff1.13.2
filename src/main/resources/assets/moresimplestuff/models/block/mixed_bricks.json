@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "moresimplestuff:blocks/mixed_bricks"
+	}
+}

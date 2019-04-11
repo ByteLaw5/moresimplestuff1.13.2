@@ -1,0 +1,23 @@
+{
+	"item.moresimplestuff.diamond_nugget": "Diamond Nugget",
+	"item.moresimplestuff.fire_staff": "Fire Staff",
+	
+	"block.moresimplestuff.stone_tile": "Stone Tile",
+	"block.moresimplestuff.mixed_bricks": "Mixed Bricks",
+	
+	"item.moresimplestuff.diving_helmet": "Diving Helmet",
+	"item.moresimplestuff.diving_boots": "Diving Boots",
+	
+	"item.moresimplestuff.baked_corn": "Baked Corn",
+	"item.moresimplestuff.basil": "Basil",
+	"item.moresimplestuff.broccolie": "Broccolie",
+	"item.moresimplestuff.cucumber": "Cucumber",
+	"item.moresimplestuff.grape": "Grape",
+	"item.moresimplestuff.lettuce": "Lettuce",
+	"item.moresimplestuff.spinach": "Spinach",
+	"item.moresimplestuff.tomato": "Tomato",
+	"item.moresimplestuff.wine": "Wine",
+	
+	"itemGroup.mssitems": "More Simple Stuff Items",
+	"itemGroup.mssblocks": "More Simple Stuff Blocks"
+}

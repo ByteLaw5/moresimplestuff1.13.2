@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"DD",
+		"DD"
+	],
+	
+	"key":
+	{
+		"D":
+		{
+			"item": "minecraft:sandstone",
+			"data": 2
+		}
+	},
+	
+	"result":
+	{
+		"item": "moreblocks:sandstone_bricks",
+		"count": 4
+	}
+}
