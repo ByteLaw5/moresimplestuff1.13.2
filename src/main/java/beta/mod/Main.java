@@ -5,9 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 import beta.mod.init.BlockInit;
 import beta.mod.init.ItemInit;
-import beta.mod.objects.ItemBaseProperties;
-import beta.mod.objects.ItemBaseType;
-import beta.mod.objects.special.FireStaff;
 import beta.mod.tabs.MoreSimpleStuffBlocks;
 import beta.mod.tabs.MoreSimpleStuffItems;
 import net.minecraft.block.Block;
@@ -33,8 +30,6 @@ public class Main {
 	public static final ItemGroup mssitems = new MoreSimpleStuffItems();
 	public static final ItemGroup mssblocks = new MoreSimpleStuffBlocks();
 	
-	public static final FireStaff STAFF = new FireStaff(new ItemBaseProperties(ItemBaseType.special).tab(mssitems).stackSize(1));
-	
 	public Main() {
 		instance = this;
 		
@@ -56,7 +51,7 @@ public class Main {
 	public static class RegistryEvents {
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
-			ItemInit.ITEMS.add(STAFF);
+			ItemInit.ITEMS.add(ItemInit.STAFF);
 			event.getRegistry().registerAll(
 					ItemInit.ITEMS.toArray(new Item[ItemInit.ITEMS.size()])
 			);
@@ -65,6 +60,7 @@ public class Main {
 		
 		@SubscribeEvent
 		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+			BlockInit.BLOCKS.add(BlockInit.QUICK_SAND);
 			event.getRegistry().registerAll(
 					BlockInit.BLOCKS.toArray(new Block[BlockInit.BLOCKS.size()])
 			);

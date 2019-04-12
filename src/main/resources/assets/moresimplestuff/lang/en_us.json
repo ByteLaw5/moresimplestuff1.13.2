@@ -4,6 +4,11 @@
 	
 	"block.moresimplestuff.stone_tile": "Stone Tile",
 	"block.moresimplestuff.mixed_bricks": "Mixed Bricks",
+	"block.moresimplestuff.quick_sand": "Quick Sand",
+	"block.moresimplestuff.andesite_bricks": "Andesite Bricks",
+	"block.moresimplestuff.diorite_bricks": "Diorite Bricks",
+	"block.moresimplestuff.granite_bricks": "Granite Bricks",
+	"block.moresimplestuff.charcoal_block": "Charcoal Block",
 	
 	"item.moresimplestuff.diving_helmet": "Diving Helmet",
 	"item.moresimplestuff.diving_boots": "Diving Boots",
@@ -19,5 +24,7 @@
 	"item.moresimplestuff.wine": "Wine",
 	
 	"itemGroup.mssitems": "More Simple Stuff Items",
-	"itemGroup.mssblocks": "More Simple Stuff Blocks"
+	"itemGroup.mssblocks": "More Simple Stuff Blocks",
+	
+	"death.attack.quick_sand": "%s sunk too deep in quick sand"
 }

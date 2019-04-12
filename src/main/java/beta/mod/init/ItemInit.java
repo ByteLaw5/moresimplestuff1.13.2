@@ -8,6 +8,7 @@ import beta.mod.lists.ArmorMaterialList;
 import beta.mod.objects.ItemBase;
 import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
+import beta.mod.objects.special.FireStaff;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -44,4 +45,9 @@ public class ItemInit {
 	public static final Item BAKED_CORN = new ItemBase("baked_corn", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 5.0f, 8, false).init();
 	public static final Item GRAPE = new ItemBase("grape", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 1.0f, 4, false).init();
 	public static final Item WINE = new ItemBase("wine", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 1.0f, 2, false, new PotionEffect(MobEffects.NAUSEA, 180 * 2, 0, false, false)).init();
+	
+	/**
+	 * Special Section
+	 */
+	public static final FireStaff STAFF = new FireStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems).stackSize(1));
 }

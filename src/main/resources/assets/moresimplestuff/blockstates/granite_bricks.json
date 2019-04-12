@@ -1,0 +1,9 @@
+{
+    "variants":
+    {
+        "":
+        {
+            "model": "moresimplestuff:block/granite_bricks"
+        }
+    }
+}
