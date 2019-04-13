@@ -5,11 +5,12 @@ import beta.mod.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 
-public class BlockBase {
+public class BlockBase extends Block {
 	public BlockBaseProperties props;
 	private String locname;
 	
 	public BlockBase(String name, BlockBaseProperties props) {
+		super(props.getProps());
 		this.props = props;
 		locname = name;
 	}

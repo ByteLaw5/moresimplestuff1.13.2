@@ -9,7 +9,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 
-public class ItemBase {
+public class ItemBase extends Item {
 	public ResourceLocation loc;
 	public ItemBaseProperties props;
 	public Block block;
@@ -20,16 +20,19 @@ public class ItemBase {
 	public PotionEffect effect;
 	
 	public ItemBase(String name, ItemBaseProperties props) {
+		super(props.getProps());
 		this.props = props;
 		loc = new ResourceLocation(Main.modid, name);
 	}
 	
 	public ItemBase(ResourceLocation blockLoc, ItemBaseProperties props) {
+		super(props.getProps());
 		this.props = props;
 		loc = blockLoc;
 	}
 	
 	public ItemBase(Block bl, ItemBaseProperties props) {
+		super(props.getProps());
 		block = bl;
 		this.props = props;
 	}
