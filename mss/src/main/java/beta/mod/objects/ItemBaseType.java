@@ -7,5 +7,5 @@ public enum ItemBaseType {
 	leggings,
 	boots,
 	food,
-	special
+	special,
 }

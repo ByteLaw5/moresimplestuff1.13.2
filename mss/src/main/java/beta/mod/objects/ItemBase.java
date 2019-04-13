@@ -9,7 +9,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 
-public class ItemBase extends Item {
+public class ItemBase {
 	public ResourceLocation loc;
 	public ItemBaseProperties props;
 	public Block block;
@@ -20,19 +20,16 @@ public class ItemBase extends Item {
 	public PotionEffect effect;
 	
 	public ItemBase(String name, ItemBaseProperties props) {
-		super(props.getProps());
 		this.props = props;
 		loc = new ResourceLocation(Main.modid, name);
 	}
 	
 	public ItemBase(ResourceLocation blockLoc, ItemBaseProperties props) {
-		super(props.getProps());
 		this.props = props;
 		loc = blockLoc;
 	}
 	
 	public ItemBase(Block bl, ItemBaseProperties props) {
-		super(props.getProps());
 		block = bl;
 		this.props = props;
 	}
@@ -57,7 +54,7 @@ public class ItemBase extends Item {
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.CHEST, props).setRegistryName(loc) : type == ItemBaseType.leggings ?
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.LEGS, props).setRegistryName(loc) : type == ItemBaseType.boots ?
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.FEET, props).setRegistryName(loc) : type == ItemBaseType.food ?
-				new ItemBaseFood(heal, saturation, isMeat, props.getProps(), effect).setRegistryName(loc) :
+				new ItemBaseFood(heal, saturation, isMeat, props.getProps(), effect).setRegistryName(loc) : 
 				new Item(props.getProps()).setRegistryName(loc);
 		ItemInit.ITEMS.add(item);
 		return item;

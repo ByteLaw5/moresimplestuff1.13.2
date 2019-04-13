@@ -8,12 +8,15 @@ import beta.mod.lists.ArmorMaterialList;
 import beta.mod.objects.ItemBase;
 import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
-import beta.mod.objects.special.FireStaff;
+import beta.mod.objects.special.staff.FireStaff;
+import beta.mod.objects.special.staff.PoisonStaff;
+import beta.mod.objects.special.staff.WitherStaff;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
 
 public class ItemInit {
 	/**
@@ -49,5 +52,22 @@ public class ItemInit {
 	/**
 	 * Special Section
 	 */
-	public static final FireStaff STAFF = new FireStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems).stackSize(1));
+	public static final Item FIRE_STAFF = new FireStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems)).setRegistryName(location("fire_staff"));
+	public static final Item WITHER_STAFF = new WitherStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems)).setRegistryName(location("wither_staff"));
+	public static final Item POISON_STAFF = new PoisonStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems)).setRegistryName(location("poison_staff"));
+	
+	public static void addSpecialItems() {
+		ITEMS.add(FIRE_STAFF);
+		ITEMS.add(WITHER_STAFF);
+		ITEMS.add(POISON_STAFF);
+	}
+	
+	/**
+	 * Used in the {@link ResourceLocation} {@code setRegistryName()}. 
+	 * @param name Input unlocalized name
+	 * @return A {@link ResourceLocation}.
+	 */
+	private static ResourceLocation location(String name) {
+		return new ResourceLocation(Main.modid, name);
+	}
 }
