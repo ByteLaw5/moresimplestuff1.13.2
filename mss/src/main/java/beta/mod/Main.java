@@ -1,5 +1,7 @@
 package beta.mod;
 
+import java.util.function.Function;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,12 +16,15 @@ import beta.mod.objects.entity.RenderPoisonProjectile;
 import beta.mod.tabs.MoreSimpleStuffBlocks;
 import beta.mod.tabs.MoreSimpleStuffItems;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -53,20 +58,24 @@ public class Main {
 	}
 	
 	private void clientRegistries(final FMLClientSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(EntityPoisonProjectile.class, RenderPoisonProjectile::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityIceProjectile.class, RenderIceProjectile::new);
-		RenderingRegistry.registerEntityRenderingHandler(EntityLavaProjectile.class, RenderLavaProjectile::new);
+		registerRender(EntityPoisonProjectile.class, RenderPoisonProjectile::new);
+		registerRender(EntityIceProjectile.class, RenderIceProjectile::new);
+		registerRender(EntityLavaProjectile.class, RenderLavaProjectile::new);
 		logger.info("clientRegistries method registered.");
+	}
+	
+	private static <T extends Entity> void registerRender(Class<T> entityClass, IRenderFactory<? super T> renderClass) {
+		RenderingRegistry.registerEntityRenderingHandler(entityClass, renderClass);
 	}
 	
 	@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 	public static class RegistryEvents {
 		@ObjectHolder(modid + ":poison_proj")
-		public static final EntityType<EntityPoisonProjectile> POISON_PROJ = EntityType.register(modid + ":poison_proj", EntityType.Builder.create(EntityPoisonProjectile.class, EntityPoisonProjectile::new));
+		public static final EntityType<EntityPoisonProjectile> POISON_PROJ = registerEntity("poison_proj", EntityPoisonProjectile.class, EntityPoisonProjectile::new);
 		@ObjectHolder(modid + ":ice_proj")
-		public static final EntityType<EntityIceProjectile> ICE_PROJ = EntityType.register(modid + ":ice_proj", EntityType.Builder.create(EntityIceProjectile.class, EntityIceProjectile::new));
+		public static final EntityType<EntityIceProjectile> ICE_PROJ = registerEntity("ice_proj", EntityIceProjectile.class, EntityIceProjectile::new);
 		@ObjectHolder(modid + ":lava_proj")
-		public static final EntityType<EntityLavaProjectile> LAVA_PROJ = EntityType.register(modid + ":lava_proj", EntityType.Builder.create(EntityLavaProjectile.class, EntityLavaProjectile::new));
+		public static final EntityType<EntityLavaProjectile> LAVA_PROJ = registerEntity("lava_proj", EntityLavaProjectile.class, EntityLavaProjectile::new);
 		
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -93,6 +102,10 @@ public class Main {
 					ICE_PROJ,
 					LAVA_PROJ
 			);
+		}
+		
+		private static <T extends Entity> EntityType<T> registerEntity(String name, Class<T> entityClass, Function<? super World, ? extends T> entityClassC) {
+			return EntityType.register(modid + ":" + name, EntityType.Builder.create(entityClass, entityClassC));
 		}
 	}
 }

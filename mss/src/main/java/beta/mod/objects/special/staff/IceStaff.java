@@ -27,7 +27,7 @@ public class IceStaff extends Staff {
 		ItemStack item = playerIn.getHeldItem(handIn);
 		ItemStack ammo = playerIn.getItemStackFromSlot(EntityEquipmentSlot.OFFHAND);
 		ItemStack neededAmmo = new ItemStack(ItemInit.ICE_AMMO);
-		if(ammo == ItemStack.EMPTY) {
+		if(ammo == ItemStack.EMPTY || !ItemStack.areItemsEqual(ammo, neededAmmo)) {
 			playerIn.sendMessage(new TextComponentTranslation("\u00A76" + "You need to have ammo in your offhand!"));
 			return new ActionResult<ItemStack>(EnumActionResult.FAIL, item);
 		} else if(ItemStack.areItemsEqual(ammo, neededAmmo)) {

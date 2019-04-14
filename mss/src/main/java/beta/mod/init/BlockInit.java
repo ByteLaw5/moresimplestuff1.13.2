@@ -35,6 +35,23 @@ public class BlockInit {
 	public static final Block ANDESITE_BRICKS = new BlockBase("andesite_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(3f, 4f).sound(SoundType.STONE)).init();
 	public static final Block DIORITE_BRICKS = new BlockBase("diorite_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(3f, 4f).sound(SoundType.STONE)).init();
 	public static final Block GRANITE_BRICKS = new BlockBase("granite_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(3f, 4f).sound(SoundType.STONE)).init();
+	public static final Block SNOW_BRICKS = new BlockBase("snow_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block WHITE_CONCRETE_BRICKS = new BlockBase("white_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block ORANGE_CONCRETE_BRICKS = new BlockBase("orange_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block MAGENTA_CONCRETE_BRICKS = new BlockBase("magenta_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block LIGHT_BLUE_CONCRETE_BRICKS = new BlockBase("light_blue_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block YELLOW_CONCRETE_BRICKS = new BlockBase("yellow_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block LIME_CONCRETE_BRICKS = new BlockBase("lime_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block PINK_CONCRETE_BRICKS = new BlockBase("pink_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block GRAY_CONCRETE_BRICKS = new BlockBase("gray_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+    public static final Block SILVER_CONCRETE_BRICKS = new BlockBase("silver_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block CYAN_CONCRETE_BRICKS = new BlockBase("cyan_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block PURPLE_CONCRETE_BRICKS = new BlockBase("purple_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block BLUE_CONCRETE_BRICKS = new BlockBase("blue_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block BROWN_CONCRETE_BRICKS = new BlockBase("brown_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block GREEN_CONCRETE_BRICKS = new BlockBase("green_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block RED_CONCRETE_BRICKS = new BlockBase("red_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block BLACK_CONCRETE_BRICKS = new BlockBase("black_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
 	
 	/**
 	 * {@link ItemBlock}s (Initialized as {@link Item}s)
@@ -45,6 +62,23 @@ public class BlockInit {
 	public static final Item andesite_bricks = new ItemBase(ANDESITE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item diorite_bricks = new ItemBase(DIORITE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item granite_bricks = new ItemBase(GRANITE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item snow_brick = new ItemBase(SNOW_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item white_concrete_bricks = new ItemBase(WHITE_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item orange_concrete_bricks = new ItemBase(ORANGE_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item magenta_concrete_bricks = new ItemBase(MAGENTA_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item light_blue_concrete_bricks = new ItemBase(LIGHT_BLUE_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item yellow_concrete_bricks = new ItemBase(YELLOW_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item lime_concrete_bricks = new ItemBase(LIME_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item pink_concrete_bricks = new ItemBase(PINK_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item gray_concrete_bricks = new ItemBase(GRAY_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item silver_concrete_bricks = new ItemBase(SILVER_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item cyan_concrete_bricks = new ItemBase(CYAN_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item purple_concrete_bricks = new ItemBase(PURPLE_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item blue_concrete_bricks = new ItemBase(BLUE_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item brown_concrete_bricks = new ItemBase(BROWN_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item green_concrete_bricks = new ItemBase(GREEN_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item red_concrete_bricks = new ItemBase(RED_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item black_concrete_bricks = new ItemBase(BLACK_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	
 	/**
 	 * Special Section
