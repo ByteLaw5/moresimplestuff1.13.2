@@ -6,6 +6,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
@@ -41,6 +43,10 @@ public class EntityLavaProjectile extends EntityFireball {
 			worldIn.setBlockState(pos.south().east(), Blocks.LAVA.getDefaultState());
 			worldIn.setBlockState(pos.north().west(), Blocks.LAVA.getDefaultState());
 			worldIn.setBlockState(pos.north().east(), Blocks.LAVA.getDefaultState());
+			this.remove();
+		} else if(result.entity != null && result.entity instanceof EntityLivingBase) {
+			((EntityLivingBase)result.entity).setFire(8);
+			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.GLOWING, 360));
 			this.remove();
 		}
 	}

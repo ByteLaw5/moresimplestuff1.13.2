@@ -37,7 +37,7 @@ public class LavaStaff extends Staff {
 			
 			playerIn.getCooldownTracker().setCooldown(this, 100);
 			
-			lava.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.z);
+			lava.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y + 2d, playerIn.posZ + aim.z);
 			lava.accelerationX = aim.x * 0.155; lava.accelerationY = aim.y * 0.155; lava.accelerationZ = aim.z * 0.155;
 			
 			worldIn.spawnEntity(lava);

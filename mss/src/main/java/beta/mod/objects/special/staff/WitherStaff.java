@@ -28,7 +28,7 @@ public class WitherStaff extends Staff {
 		
 		playerIn.getCooldownTracker().setCooldown(this, 60);
 		
-		skull.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.z);
+		skull.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y + 2d, playerIn.posZ + aim.z);
 		skull.accelerationX = aim.x * 0.1; skull.accelerationY = aim.y * 0.1; skull.accelerationZ = aim.z * 0.1;
 		
 		worldIn.spawnEntity(skull);
