@@ -3,6 +3,11 @@
 	"item.moresimplestuff.fire_staff": "Fire Staff",
 	"item.moresimplestuff.wither_staff": "Wither Staff",
 	"item.moresimplestuff.poison_staff": "Poison Staff",
+	"item.moresimplestuff.poison_ammo": "Poison Ammo",
+	"item.moresimplestuff.ice_staff": "Ice Staff",
+	"item.moresimplestuff.ice_ammo": "Ice Ammo",
+	"item.moresimplestuff.lava_staff": "Lava Staff",
+	"item.moresimplestuff.fire_ammo": "Lava Ammo",
 	
 	"block.moresimplestuff.stone_tile": "Stone Tile",
 	"block.moresimplestuff.mixed_bricks": "Mixed Bricks",
@@ -15,6 +20,7 @@
 	"item.moresimplestuff.diving_helmet": "Diving Helmet",
 	"item.moresimplestuff.diving_boots": "Diving Boots",
 	
+	"item.moresimplestuff.corn": "Corn",
 	"item.moresimplestuff.baked_corn": "Baked Corn",
 	"item.moresimplestuff.basil": "Basil",
 	"item.moresimplestuff.broccolie": "Broccolie",
@@ -28,5 +34,9 @@
 	"itemGroup.mssitems": "More Simple Stuff Items",
 	"itemGroup.mssblocks": "More Simple Stuff Blocks",
 	
-	"death.attack.quick_sand": "%s sunk too deep in quick sand"
+	"death.attack.quick_sand": "%s sunk too deep in quick sand",
+	
+	"entity.moresimplestuff.poison_proj": "Poison Projectile",
+	"entity.moresimplestuff.ice_proj": "Ice Projectile",
+	"entity.moresimplestuff.lava_proj": "Lava Projectile"
 }

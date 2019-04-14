@@ -3,12 +3,9 @@ package beta.mod.objects.entity;
 import beta.mod.Main;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.fluid.IFluidState;
-import net.minecraft.init.MobEffects;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
@@ -16,30 +13,28 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-public class EntityPoisonProjectile extends EntityFireball {
-	public EntityPoisonProjectile(World worldIn) {
-		super(Main.RegistryEvents.POISON_PROJ, worldIn, 1.0f, 1.0f);
+public class EntityIceProjectile extends EntityFireball {
+	public EntityIceProjectile(World worldIn) {
+		super(Main.RegistryEvents.ICE_PROJ, worldIn, 1.0f, 1.0f);
 		this.setSize(1.0f, 1.0f);
 	}
 	
-	public EntityPoisonProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.POISON_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+	public EntityIceProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
+		super(Main.RegistryEvents.ICE_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
-	public EntityPoisonProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.POISON_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+	public EntityIceProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
+		super(Main.RegistryEvents.ICE_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
-
+	
 	@Override
 	protected void onImpact(RayTraceResult result) {
-		if(result.entity != null && result.entity instanceof EntityLivingBase) {
-			if(result.entity instanceof EntityZombie || result.entity instanceof EntitySkeleton) {
-				((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300, 1));
-				this.remove();
-			} else {
-				((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.POISON, 300, 1));
-				this.remove();
-			}
+		if(result.entity == null) {
+			BlockPos pos = result.getBlockPos().up();
+			World worldIn = this.world;
+			worldIn.setBlockState(pos, Blocks.ICE.getDefaultState());
+			worldIn.setBlockState(pos.up(), Blocks.ICE.getDefaultState());
+			this.remove();
 		}
 	}
 	

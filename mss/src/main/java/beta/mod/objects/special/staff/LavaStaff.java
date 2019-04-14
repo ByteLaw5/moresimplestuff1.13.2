@@ -4,7 +4,7 @@ import java.util.List;
 
 import beta.mod.init.ItemInit;
 import beta.mod.objects.ItemBaseProperties;
-import beta.mod.objects.entity.EntityPoisonProjectile;
+import beta.mod.objects.entity.EntityLavaProjectile;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -17,8 +17,8 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 
-public class PoisonStaff extends Staff {
-	public PoisonStaff(ItemBaseProperties props) {
+public class LavaStaff extends Staff {
+	public LavaStaff(ItemBaseProperties props) {
 		super(props);
 	}
 
@@ -26,21 +26,21 @@ public class PoisonStaff extends Staff {
 	public ActionResult<ItemStack> onRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		ItemStack item = playerIn.getHeldItem(handIn);
 		ItemStack ammo = playerIn.getItemStackFromSlot(EntityEquipmentSlot.OFFHAND);
-		ItemStack neededAmmo = new ItemStack(ItemInit.POISON_AMMO);
+		ItemStack neededAmmo = new ItemStack(ItemInit.FIRE_AMMO);
 		if(ammo == ItemStack.EMPTY) {
 			playerIn.sendMessage(new TextComponentTranslation("\u00A76" + "You need to have ammo in your offhand!"));
 			return new ActionResult<ItemStack>(EnumActionResult.FAIL, item);
 		} else if(ItemStack.areItemsEqual(ammo, neededAmmo)) {
 			ammo.shrink(1);
 			Vec3d aim = playerIn.getLookVec();
-			EntityPoisonProjectile poison = new EntityPoisonProjectile(worldIn, playerIn, aim.x * 0.155, aim.y * 0.155, aim.z * 0.155);
+			EntityLavaProjectile lava = new EntityLavaProjectile(worldIn, playerIn, aim.x * 0.155, aim.y * 0.155, aim.z * 0.155);
 			
-			playerIn.getCooldownTracker().setCooldown(this, 50);
+			playerIn.getCooldownTracker().setCooldown(this, 100);
 			
-			poison.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.y);
-			poison.accelerationX = aim.x * 0.155; poison.accelerationY = aim.y * 0.155; poison.accelerationZ = aim.z * 0.155;
+			lava.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.z);
+			lava.accelerationX = aim.x * 0.155; lava.accelerationY = aim.y * 0.155; lava.accelerationZ = aim.z * 0.155;
 			
-			worldIn.spawnEntity(poison);
+			worldIn.spawnEntity(lava);
 			
 			item.damageItem(1, playerIn);
 			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
@@ -50,7 +50,9 @@ public class PoisonStaff extends Staff {
 
 	@Override
 	public void addDescription(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(new TextComponentTranslation("\u00A76" + "Poison your enemies"));
-		tooltip.add(new TextComponentTranslation("\u00A76" + "with this tool!"));
+		tooltip.add(new TextComponentTranslation("\u00A7e" + "Burn your enemies"));
+		tooltip.add(new TextComponentTranslation("\u00A7e" + "with this tool! Use"));
+		tooltip.add(new TextComponentTranslation("\u00A7e" + "it wisely!"));
 	}
+	
 }

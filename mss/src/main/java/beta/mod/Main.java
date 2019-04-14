@@ -5,7 +5,11 @@ import org.apache.logging.log4j.Logger;
 
 import beta.mod.init.BlockInit;
 import beta.mod.init.ItemInit;
+import beta.mod.objects.entity.EntityIceProjectile;
+import beta.mod.objects.entity.EntityLavaProjectile;
 import beta.mod.objects.entity.EntityPoisonProjectile;
+import beta.mod.objects.entity.RenderIceProjectile;
+import beta.mod.objects.entity.RenderLavaProjectile;
 import beta.mod.objects.entity.RenderPoisonProjectile;
 import beta.mod.tabs.MoreSimpleStuffBlocks;
 import beta.mod.tabs.MoreSimpleStuffItems;
@@ -50,6 +54,8 @@ public class Main {
 	
 	private void clientRegistries(final FMLClientSetupEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(EntityPoisonProjectile.class, RenderPoisonProjectile::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityIceProjectile.class, RenderIceProjectile::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityLavaProjectile.class, RenderLavaProjectile::new);
 		logger.info("clientRegistries method registered.");
 	}
 	
@@ -57,6 +63,10 @@ public class Main {
 	public static class RegistryEvents {
 		@ObjectHolder(modid + ":poison_proj")
 		public static final EntityType<EntityPoisonProjectile> POISON_PROJ = EntityType.register(modid + ":poison_proj", EntityType.Builder.create(EntityPoisonProjectile.class, EntityPoisonProjectile::new));
+		@ObjectHolder(modid + ":ice_proj")
+		public static final EntityType<EntityIceProjectile> ICE_PROJ = EntityType.register(modid + ":ice_proj", EntityType.Builder.create(EntityIceProjectile.class, EntityIceProjectile::new));
+		@ObjectHolder(modid + ":lava_proj")
+		public static final EntityType<EntityLavaProjectile> LAVA_PROJ = EntityType.register(modid + ":lava_proj", EntityType.Builder.create(EntityLavaProjectile.class, EntityLavaProjectile::new));
 		
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -79,7 +89,9 @@ public class Main {
 		@SubscribeEvent
 		public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
 			event.getRegistry().registerAll(
-					POISON_PROJ
+					POISON_PROJ,
+					ICE_PROJ,
+					LAVA_PROJ
 			);
 		}
 	}

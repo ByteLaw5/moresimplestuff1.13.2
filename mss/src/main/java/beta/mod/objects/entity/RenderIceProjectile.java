@@ -1,31 +1,27 @@
 package beta.mod.objects.entity;
 
 import beta.mod.Main;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.entity.Entity;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT) @SuppressWarnings("unused")
-public class RenderPoisonProjectile extends Render<EntityPoisonProjectile> {
+public class RenderIceProjectile extends Render<EntityIceProjectile> {
 	private float scale = 1.0f;
-	private static final ResourceLocation TEXTURES = new ResourceLocation(Main.modid, "textures/entity/poison_proj.png");
+	private static final ResourceLocation TEXTURES = new ResourceLocation(Main.modid, "textures/entity/ice_proj.png");
 	
-	public RenderPoisonProjectile(RenderManager manager) {
+	public RenderIceProjectile(RenderManager manager) {
 		super(manager);
 	}
 	
 	@Override
-	public void doRender(EntityPoisonProjectile entity, double x, double y, double z, float entityYaw,
+	public void doRender(EntityIceProjectile entity, double x, double y, double z, float entityYaw,
 			float partialTicks) {
 		  GlStateManager.pushMatrix();
 	      this.bindEntityTexture(entity);
@@ -43,7 +39,6 @@ public class RenderPoisonProjectile extends Render<EntityPoisonProjectile> {
 	         GlStateManager.enableColorMaterial();
 	         GlStateManager.enableOutlineMode(this.getTeamColor(entity));
 	      }
-
 	      bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX_NORMAL);
 	      bufferbuilder.pos(-0.5D, -0.25D, 0.0D).tex(0.0D, 1.0D).normal(0.0F, 1.0F, 0.0F).endVertex();
 	      bufferbuilder.pos(0.5D, -0.25D, 0.0D).tex(1.0D, 1.0D).normal(0.0F, 1.0F, 0.0F).endVertex();
@@ -59,9 +54,9 @@ public class RenderPoisonProjectile extends Render<EntityPoisonProjectile> {
 	      GlStateManager.popMatrix();
 	      super.doRender(entity, x, y, z, entityYaw, partialTicks);
 	}
-
+	
 	@Override
-	protected ResourceLocation getEntityTexture(EntityPoisonProjectile entity) {
+	protected ResourceLocation getEntityTexture(EntityIceProjectile entity) {
 		return TEXTURES;
 	}
 }

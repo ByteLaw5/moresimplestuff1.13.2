@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "moresimplestuff:items/ice_staff"
+	}
+}
