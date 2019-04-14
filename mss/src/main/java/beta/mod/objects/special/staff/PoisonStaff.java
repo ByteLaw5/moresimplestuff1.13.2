@@ -37,7 +37,7 @@ public class PoisonStaff extends Staff {
 			
 			playerIn.getCooldownTracker().setCooldown(this, 50);
 			
-			poison.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.y);
+			poison.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.z);
 			poison.accelerationX = aim.x * 0.155; poison.accelerationY = aim.y * 0.155; poison.accelerationZ = aim.z * 0.155;
 			
 			worldIn.spawnEntity(poison);

@@ -6,6 +6,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
@@ -34,6 +36,9 @@ public class EntityIceProjectile extends EntityFireball {
 			World worldIn = this.world;
 			worldIn.setBlockState(pos, Blocks.ICE.getDefaultState());
 			worldIn.setBlockState(pos.up(), Blocks.ICE.getDefaultState());
+			this.remove();
+		} else if(result.entity != null && result.entity instanceof EntityLivingBase) {
+			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 400, 5));
 			this.remove();
 		}
 	}

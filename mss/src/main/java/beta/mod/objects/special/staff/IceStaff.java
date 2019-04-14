@@ -37,7 +37,7 @@ public class IceStaff extends Staff {
 			
 			playerIn.getCooldownTracker().setCooldown(this, 50);
 			
-			ice.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.y);
+			ice.setPosition(playerIn.posX + aim.x, playerIn.posY + aim.y * -3.1d, playerIn.posZ + aim.z);
 			ice.accelerationX = aim.x * 0.155; ice.accelerationY = aim.y * 0.155; ice.accelerationZ = aim.z * 0.155;
 			
 			worldIn.spawnEntity(ice);
