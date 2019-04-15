@@ -8,4 +8,5 @@ public enum ItemBaseType {
 	boots,
 	food,
 	special,
+	spawnegg;
 }

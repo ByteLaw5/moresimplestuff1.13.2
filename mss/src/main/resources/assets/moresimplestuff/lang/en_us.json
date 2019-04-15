@@ -8,6 +8,7 @@
 	"item.moresimplestuff.ice_ammo": "Ice Ammo",
 	"item.moresimplestuff.lava_staff": "Lava Staff",
 	"item.moresimplestuff.fire_ammo": "Lava Ammo",
+	"item.moresimplestuff.ice_ghast_spawn": "Ice Ghast Spawn Egg",
 	
 	"block.moresimplestuff.stone_tile": "Stone Tile",
 	"block.moresimplestuff.mixed_bricks": "Mixed Bricks",
@@ -52,8 +53,12 @@
 	"itemGroup.mssblocks": "More Simple Stuff Blocks",
 	
 	"death.attack.quick_sand": "%s sunk too deep in quick sand",
+	"death.attack.frozen": "%1$s was frozen while trying to escape from %2$s",
+	"death.attack.frozenExplosion": "%1$s got freeze exploded by %2$s",
 	
 	"entity.moresimplestuff.poison_proj": "Poison Projectile",
 	"entity.moresimplestuff.ice_proj": "Ice Projectile",
-	"entity.moresimplestuff.lava_proj": "Lava Projectile"
+	"entity.moresimplestuff.lava_proj": "Lava Projectile",
+	"entity.moresimplestuff.ice_ghast_proj": "Ice Projectile",
+	"entity.moresimplestuff.ice_ghast": "Ice Ghast"
 }

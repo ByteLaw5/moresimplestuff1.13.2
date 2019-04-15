@@ -32,7 +32,7 @@ public class EntityPoisonProjectile extends EntityFireball {
 
 	@Override
 	protected void onImpact(RayTraceResult result) {
-		if(result.entity != null && result.entity instanceof EntityLivingBase) {
+		if(result.entity instanceof EntityLivingBase) {
 			if(result.entity instanceof EntityZombie || result.entity instanceof EntitySkeleton) {
 				((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300, 1));
 				this.remove();

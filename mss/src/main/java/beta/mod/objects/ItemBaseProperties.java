@@ -1,6 +1,7 @@
 package beta.mod.objects;
 
 import beta.mod.lists.ArmorMaterialList;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 
@@ -9,6 +10,9 @@ public class ItemBaseProperties {
 	private ItemBaseType itype;
 	
 	private ArmorMaterialList armat;
+	
+	private EntityType<?> entityType;
+	private int primaryColor, secondaryColor;
 	
 	public ItemBaseProperties(ItemBaseType type) {
 		itype = type;
@@ -43,5 +47,32 @@ public class ItemBaseProperties {
 	
 	public ArmorMaterialList getArmorMaterial() {
 		return armat;
+	}
+
+	public EntityType<?> getEntityType() {
+		return entityType;
+	}
+
+	public ItemBaseProperties setEntityType(EntityType<?> entityType) {
+		this.entityType = entityType;
+		return this;
+	}
+
+	public int getPrimaryColor() {
+		return primaryColor;
+	}
+
+	public ItemBaseProperties setPrimaryColor(int primaryColor) {
+		this.primaryColor = primaryColor;
+		return this;
+	}
+
+	public int getSecondaryColor() {
+		return secondaryColor;
+	}
+
+	public ItemBaseProperties setSecondaryColor(int secondaryColor) {
+		this.secondaryColor = secondaryColor;
+		return this;
 	}
 }

@@ -44,7 +44,7 @@ public class EntityLavaProjectile extends EntityFireball {
 			worldIn.setBlockState(pos.north().west(), Blocks.LAVA.getDefaultState());
 			worldIn.setBlockState(pos.north().east(), Blocks.LAVA.getDefaultState());
 			this.remove();
-		} else if(result.entity != null && result.entity instanceof EntityLivingBase) {
+		} else if(result.entity instanceof EntityLivingBase) {
 			((EntityLivingBase)result.entity).setFire(8);
 			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.GLOWING, 360));
 			this.remove();

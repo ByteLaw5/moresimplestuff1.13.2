@@ -9,31 +9,38 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-public class EntityIceProjectile extends EntityFireball {
-	public EntityIceProjectile(World worldIn) {
-		super(Main.RegistryEvents.ICE_PROJ, worldIn, 1.0f, 1.0f);
+public class EntityIceGhastProjectile extends EntityFireball {
+	public EntityIceGhastProjectile(World worldIn) {
+		super(Main.RegistryEvents.ICE_GHAST_PROJ, worldIn, 1.0f, 1.0f);
 		this.setSize(1.0f, 1.0f);
 	}
 	
-	public EntityIceProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.ICE_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+	public EntityIceGhastProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
+		super(Main.RegistryEvents.ICE_GHAST_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
-	public EntityIceProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.ICE_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+	public EntityIceGhastProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
+		super(Main.RegistryEvents.ICE_GHAST_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
 	@Override
 	protected void onImpact(RayTraceResult result) {
-		if(result.entity == null) {
+		if(result.entity instanceof EntityLivingBase) {
+			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 500, 4));
+			World worldIn = this.world;
+			worldIn.createExplosion(this, new EntityDamageSourceIndirect("frozen", this, this.shootingEntity), this.posX, this.posY, this.posZ, 2, false, true);
+			this.remove();
+		} else {
 			BlockPos pos = result.getBlockPos().up();
 			World worldIn = this.world;
+			worldIn.createExplosion(this, new EntityDamageSourceIndirect("frozenExplosion", this, this.shootingEntity), this.posX, this.posY, this.posZ, 2, false, true);
 			worldIn.setBlockState(pos, Blocks.ICE.getDefaultState());
 			worldIn.setBlockState(pos.east(), Blocks.ICE.getDefaultState());
 			worldIn.setBlockState(pos.west(), Blocks.ICE.getDefaultState());
@@ -52,9 +59,6 @@ public class EntityIceProjectile extends EntityFireball {
 			worldIn.setBlockState(pos.south().east().up(), Blocks.ICE.getDefaultState());
 			worldIn.setBlockState(pos.north().west().up(), Blocks.ICE.getDefaultState());
 			worldIn.setBlockState(pos.north().east().up(), Blocks.ICE.getDefaultState());
-			this.remove();
-		} else if(result.entity instanceof EntityLivingBase) {
-			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 400, 5));
 			this.remove();
 		}
 	}

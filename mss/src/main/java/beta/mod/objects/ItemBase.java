@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSpawnEgg;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 
@@ -54,7 +55,8 @@ public class ItemBase {
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.CHEST, props).setRegistryName(loc) : type == ItemBaseType.leggings ?
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.LEGS, props).setRegistryName(loc) : type == ItemBaseType.boots ?
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.FEET, props).setRegistryName(loc) : type == ItemBaseType.food ?
-				new ItemBaseFood(heal, saturation, isMeat, props.getProps(), effect).setRegistryName(loc) : 
+				new ItemBaseFood(heal, saturation, isMeat, props.getProps(), effect).setRegistryName(loc) : type == ItemBaseType.spawnegg ?
+				new ItemSpawnEgg(props.getEntityType(), props.getPrimaryColor(), props.getSecondaryColor(), props.getProps()).setRegistryName(loc) :
 				new Item(props.getProps()).setRegistryName(loc);
 		ItemInit.ITEMS.add(item);
 		return item;

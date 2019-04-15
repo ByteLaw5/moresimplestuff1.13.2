@@ -7,14 +7,19 @@ import org.apache.logging.log4j.Logger;
 
 import beta.mod.init.BlockInit;
 import beta.mod.init.ItemInit;
+import beta.mod.objects.entity.EntityIceGhast;
+import beta.mod.objects.entity.EntityIceGhastProjectile;
 import beta.mod.objects.entity.EntityIceProjectile;
 import beta.mod.objects.entity.EntityLavaProjectile;
 import beta.mod.objects.entity.EntityPoisonProjectile;
+import beta.mod.objects.entity.RenderIceGhast;
+import beta.mod.objects.entity.RenderIceGhastProjectile;
 import beta.mod.objects.entity.RenderIceProjectile;
 import beta.mod.objects.entity.RenderLavaProjectile;
 import beta.mod.objects.entity.RenderPoisonProjectile;
 import beta.mod.tabs.MoreSimpleStuffBlocks;
 import beta.mod.tabs.MoreSimpleStuffItems;
+import beta.mod.world.BiomeSpawns;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -54,6 +59,7 @@ public class Main {
 	}
 	
 	private void setup(final FMLCommonSetupEvent event) {
+		BiomeSpawns.addSpawns();
 		logger.info("setup method registered.");
 	}
 	
@@ -61,6 +67,8 @@ public class Main {
 		registerRender(EntityPoisonProjectile.class, RenderPoisonProjectile::new);
 		registerRender(EntityIceProjectile.class, RenderIceProjectile::new);
 		registerRender(EntityLavaProjectile.class, RenderLavaProjectile::new);
+		registerRender(EntityIceGhast.class, RenderIceGhast::new);
+		registerRender(EntityIceGhastProjectile.class, RenderIceGhastProjectile::new);
 		logger.info("clientRegistries method registered.");
 	}
 	
@@ -76,6 +84,10 @@ public class Main {
 		public static final EntityType<EntityIceProjectile> ICE_PROJ = registerEntity("ice_proj", EntityIceProjectile.class, EntityIceProjectile::new);
 		@ObjectHolder(modid + ":lava_proj")
 		public static final EntityType<EntityLavaProjectile> LAVA_PROJ = registerEntity("lava_proj", EntityLavaProjectile.class, EntityLavaProjectile::new);
+		@ObjectHolder(modid + ":ice_ghast")
+		public static final EntityType<EntityIceGhast> ICE_GHAST = registerEntity("ice_ghast", EntityIceGhast.class, EntityIceGhast::new);
+		@ObjectHolder(modid + ":ice_ghast_proj")
+		public static final EntityType<EntityIceGhastProjectile> ICE_GHAST_PROJ = registerEntity("ice_ghast_proj", EntityIceGhastProjectile.class, EntityIceGhastProjectile::new);
 		
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
