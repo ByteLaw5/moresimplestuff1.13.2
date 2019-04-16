@@ -38,8 +38,8 @@ public class ItemInit {
 	/**            
 	 * {@link ItemArmor}s
 	 */          
-	public static final Item DIVING_HELMET = new ItemBase("diving_helmet", new ItemBaseProperties(ItemBaseType.helmet).tab(Main.mssitems).setArmorMaterial(ArmorMaterialList.DIVING)).init();
-	public static final Item DIVING_BOOTS = new ItemBase("diving_boots", new ItemBaseProperties(ItemBaseType.boots).tab(Main.mssitems).setArmorMaterial(ArmorMaterialList.DIVING)).init();
+	public static final Item DIVING_HELMET = new ItemBase("diving_helmet", new ItemBaseProperties(ItemBaseType.helmet).tab(Main.mssitems).setArmorMaterial(ArmorMaterialList.DIVING), new PotionEffect(MobEffects.WATER_BREATHING, 20, 0, false, false)).init();
+	public static final Item DIVING_BOOTS = new ItemBase("diving_boots", new ItemBaseProperties(ItemBaseType.boots).tab(Main.mssitems).setArmorMaterial(ArmorMaterialList.DIVING), new PotionEffect(MobEffects.SPEED, 20, 1, false, false)).init();
 	              
 	/**           
 	 * {@link ItemFood}s
@@ -53,7 +53,7 @@ public class ItemInit {
 	public static final Item CORN = new ItemBase("corn", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 2.0f, 3, false).init();
 	public static final Item BAKED_CORN = new ItemBase("baked_corn", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 5.0f, 8, false).init();
 	public static final Item GRAPE = new ItemBase("grape", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 1.0f, 4, false).init();
-	public static final Item WINE = new ItemBase("wine", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 1.0f, 2, false, new PotionEffect(MobEffects.NAUSEA, 180 * 2, 0, false, false)).init();
+	public static final Item WINE = new ItemBase("wine", new ItemBaseProperties(ItemBaseType.drink).tab(Main.mssitems), new PotionEffect(MobEffects.NAUSEA, 200, 0, false, false), new PotionEffect(MobEffects.STRENGTH, 200, 1, false, false)).init();
 	
 	/**
 	 * {@link ItemSpawnEgg}s

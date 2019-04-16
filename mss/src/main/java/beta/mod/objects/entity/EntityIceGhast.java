@@ -41,7 +41,6 @@ public class EntityIceGhast extends EntityGhast {
 		return true;
 	}
 	
-	
 	static class AIIceballAttack extends EntityAIBase {
 		private final EntityGhast parentEntity;
 	      public int attackTimer;

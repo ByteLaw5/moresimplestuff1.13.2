@@ -112,7 +112,9 @@ public class Main {
 			event.getRegistry().registerAll(
 					POISON_PROJ,
 					ICE_PROJ,
-					LAVA_PROJ
+					LAVA_PROJ,
+					ICE_GHAST,
+					ICE_GHAST_PROJ
 			);
 		}
 		
