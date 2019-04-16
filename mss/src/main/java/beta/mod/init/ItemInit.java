@@ -8,6 +8,7 @@ import beta.mod.lists.ArmorMaterialList;
 import beta.mod.objects.ItemBase;
 import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
+import beta.mod.objects.special.shield.ScutumShield;
 import beta.mod.objects.special.staff.FireStaff;
 import beta.mod.objects.special.staff.IceStaff;
 import beta.mod.objects.special.staff.LavaStaff;
@@ -68,6 +69,7 @@ public class ItemInit {
 	public static final Item POISON_STAFF = new PoisonStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems).stackSize(1)).setRegistryName(location("poison_staff"));
 	public static final Item ICE_STAFF = new IceStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems).stackSize(1)).setRegistryName(location("ice_staff"));
 	public static final Item LAVA_STAFF = new LavaStaff(new ItemBaseProperties(ItemBaseType.special).tab(Main.mssitems).stackSize(1)).setRegistryName(location("lava_staff"));
+	public static final Item SCUTUM_SHEIELD = new ScutumShield("scutum_shield", new ItemBaseProperties().tab(Main.mssitems));
 	
 	public static void addSpecialItems() {
 		ITEMS.add(FIRE_STAFF);
@@ -75,6 +77,7 @@ public class ItemInit {
 		ITEMS.add(POISON_STAFF);
 		ITEMS.add(ICE_STAFF);
 		ITEMS.add(LAVA_STAFF);
+		ITEMS.add(SCUTUM_SHEIELD);
 	}
 	
 	/**

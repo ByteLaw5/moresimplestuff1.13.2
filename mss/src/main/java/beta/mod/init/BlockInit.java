@@ -10,6 +10,7 @@ import beta.mod.objects.ItemBase;
 import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
 import beta.mod.objects.special.BlockBars;
+import beta.mod.objects.special.BlockBaseDoor;
 import beta.mod.objects.special.BlockQuickSand;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -53,6 +54,7 @@ public class BlockInit {
 	public static final Block GREEN_CONCRETE_BRICKS = new BlockBase("green_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
 	public static final Block RED_CONCRETE_BRICKS = new BlockBase("red_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
 	public static final Block BLACK_CONCRETE_BRICKS = new BlockBase("black_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
+	public static final Block STONE_DOOR = new BlockBaseDoor("stone_door", new BlockBaseProperties(Material.ROCK).hardness(1.5f));
 	
 	/**
 	 * {@link ItemBlock}s (Initialized as {@link Item}s)
@@ -80,6 +82,7 @@ public class BlockInit {
 	public static final Item green_concrete_bricks = new ItemBase(GREEN_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item red_concrete_bricks = new ItemBase(RED_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item black_concrete_bricks = new ItemBase(BLACK_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item stone_door = new ItemBase(STONE_DOOR, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	
 	/**
 	 * Special Section
@@ -102,5 +105,6 @@ public class BlockInit {
 		BLOCKS.add(BARS_PLUS);
 		BLOCKS.add(BARS_CHAIN);
 		BLOCKS.add(BARS_STONE);
+		BLOCKS.add(STONE_DOOR);
 	}
 }
