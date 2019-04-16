@@ -9,6 +9,7 @@ import beta.mod.objects.BlockBaseProperties;
 import beta.mod.objects.ItemBase;
 import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
+import beta.mod.objects.special.BlockBars;
 import beta.mod.objects.special.BlockQuickSand;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -84,6 +85,22 @@ public class BlockInit {
 	 * Special Section
 	 */
 	public static final BlockQuickSand QUICK_SAND = new BlockQuickSand(new BlockBaseProperties(Material.SAND).hardnessAndResistance(0.5f, 0.5f).sound(SoundType.SAND));
+	public static final Block BARS_WALL = new BlockBars("bars_wall", new BlockBaseProperties(Material.IRON).hardness(1.5f));
+	public static final Block BARS_PLUS = new BlockBars("bars_plus", new BlockBaseProperties(Material.IRON).hardness(1.5f));
+	public static final Block BARS_CHAIN = new BlockBars("bars_chain", new BlockBaseProperties(Material.IRON).hardness(1.5f));
+	public static final Block BARS_STONE = new BlockBars("bars_stone", new BlockBaseProperties(Material.ROCK).hardness(1.5f));
 	
 	public static final Item quick_sand = new ItemBase(QUICK_SAND, new ItemBaseProperties(ItemBaseType.special).tab(Main.mssblocks)).init();
+	public static final Item bars_wall = new ItemBase(BARS_WALL, new ItemBaseProperties(ItemBaseType.special).tab(Main.mssblocks)).init();
+	public static final Item bars_plus = new ItemBase(BARS_PLUS, new ItemBaseProperties(ItemBaseType.special).tab(Main.mssblocks)).init();
+	public static final Item bars_chain = new ItemBase(BARS_CHAIN, new ItemBaseProperties(ItemBaseType.special).tab(Main.mssblocks)).init();
+	public static final Item bars_stone = new ItemBase(BARS_STONE, new ItemBaseProperties(ItemBaseType.special).tab(Main.mssblocks)).init();
+	
+	public static void addSpecialBlocks() {
+		BLOCKS.add(QUICK_SAND);
+		BLOCKS.add(BARS_WALL);
+		BLOCKS.add(BARS_PLUS);
+		BLOCKS.add(BARS_CHAIN);
+		BLOCKS.add(BARS_STONE);
+	}
 }

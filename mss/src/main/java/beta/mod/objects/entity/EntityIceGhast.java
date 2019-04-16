@@ -17,7 +17,6 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-@SuppressWarnings("unused")
 public class EntityIceGhast extends EntityGhast {
 	public EntityIceGhast(World worldIn) {
 		super(worldIn);
@@ -42,7 +41,7 @@ public class EntityIceGhast extends EntityGhast {
 	}
 	
 	static class AIIceballAttack extends EntityAIBase {
-		private final EntityGhast parentEntity;
+		private final EntityIceGhast parentEntity;
 	      public int attackTimer;
 
 	      public AIIceballAttack(EntityIceGhast ghast) {
@@ -63,7 +62,6 @@ public class EntityIceGhast extends EntityGhast {
 	      
 	      public void tick() {
 	         EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
-	         double d0 = 64.0D;
 	         if (entitylivingbase.getDistanceSq(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
 	            World world = this.parentEntity.world;
 	            ++this.attackTimer;
@@ -72,7 +70,6 @@ public class EntityIceGhast extends EntityGhast {
 	            }
 
 	            if (this.attackTimer == 20) {
-	               double d1 = 4.0D;
 	               Vec3d vec3d = this.parentEntity.getLook(1.0F);
 	               double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.x * 4.0D);
 	               double d3 = entitylivingbase.getBoundingBox().minY + (double)(entitylivingbase.height / 2.0F) - (0.5D + this.parentEntity.posY + (double)(this.parentEntity.height / 2.0F));
@@ -117,7 +114,6 @@ public class EntityIceGhast extends EntityGhast {
 	            this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw;
 	         } else {
 	            EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
-	            double d0 = 64.0D;
 	            if (entitylivingbase.getDistanceSq(this.parentEntity) < 4096.0D) {
 	               double d1 = entitylivingbase.posX - this.parentEntity.posX;
 	               double d2 = entitylivingbase.posZ - this.parentEntity.posZ;

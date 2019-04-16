@@ -100,7 +100,7 @@ public class Main {
 		
 		@SubscribeEvent
 		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-			BlockInit.BLOCKS.add(BlockInit.QUICK_SAND);
+			BlockInit.addSpecialBlocks();
 			event.getRegistry().registerAll(
 					BlockInit.BLOCKS.toArray(new Block[BlockInit.BLOCKS.size()])
 			);
@@ -117,6 +117,11 @@ public class Main {
 					ICE_GHAST_PROJ
 			);
 		}
+		
+//		@SubscribeEvent
+//		public static void registerBiomes(final RegistryEvent.Register<Biome> event) {
+//			BiomeInit.registerAllBiomes(event);
+//		}
 		
 		private static <T extends Entity> EntityType<T> registerEntity(String name, Class<T> entityClass, Function<? super World, ? extends T> entityClassC) {
 			return EntityType.register(modid + ":" + name, EntityType.Builder.create(entityClass, entityClassC));
