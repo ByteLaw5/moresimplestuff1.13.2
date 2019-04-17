@@ -11,14 +11,13 @@
 	{
 		"D":
 		{
-			"item": "minecraft:sandstone",
-			"data": 2
+			"item": "minecraft:cut_sandstone"
 		}
 	},
 	
 	"result":
 	{
-		"item": "moreblocks:sandstone_bricks",
+		"item": "moresimplestuff:sandstone_bricks",
 		"count": 4
 	}
 }

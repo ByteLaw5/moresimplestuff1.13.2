@@ -3,6 +3,7 @@ package beta.mod.objects.entity;
 import java.util.Random;
 
 import beta.mod.Main;
+import beta.mod.init.LootTableInit;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -10,6 +11,7 @@ import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -33,6 +35,11 @@ public class EntityIceGhast extends EntityGhast {
 		this.tasks.addTask(7, new EntityIceGhast.AILookAround(this));
 		this.tasks.addTask(7, new EntityIceGhast.AIIceballAttack(this));
 		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+	}
+	
+	@Override
+	protected ResourceLocation getLootTable() {
+		return LootTableInit.ENTITIES_ICE_GHAST;
 	}
 	
 	@Override

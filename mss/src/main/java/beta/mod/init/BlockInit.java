@@ -11,12 +11,14 @@ import beta.mod.objects.ItemBaseProperties;
 import beta.mod.objects.ItemBaseType;
 import beta.mod.objects.special.BlockBars;
 import beta.mod.objects.special.BlockBaseDoor;
+import beta.mod.objects.special.BlockBaseTrapdoor;
 import beta.mod.objects.special.BlockQuickSand;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
 
 public class BlockInit {
 	/**
@@ -54,7 +56,12 @@ public class BlockInit {
 	public static final Block GREEN_CONCRETE_BRICKS = new BlockBase("green_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
 	public static final Block RED_CONCRETE_BRICKS = new BlockBase("red_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
 	public static final Block BLACK_CONCRETE_BRICKS = new BlockBase("black_concrete_bricks", new BlockBaseProperties(Material.ROCK).hardnessAndResistance(2f, 3f).sound(SoundType.STONE)).init();
-	public static final Block STONE_DOOR = new BlockBaseDoor("stone_door", new BlockBaseProperties(Material.ROCK).hardness(1.5f));
+	public static final Block STONE_DOOR = new BlockBaseDoor(new BlockBaseProperties(Material.IRON).hardness(1.5f)).setRegistryName(location("stone_door"));
+	public static final Block RUBY_DOOR = new BlockBaseDoor(new BlockBaseProperties(Material.IRON).hardness(1.5f)).setRegistryName(location("ruby_door"));
+	public static final Block SANDSTONE_BRICKS = new BlockBase("sandstone_bricks", new BlockBaseProperties(Material.ROCK).hardness(1.5f)).init();
+	public static final Block BURNED_BRICKS = new BlockBase("burned_bricks", new BlockBaseProperties(Material.ROCK).hardness(1.5f)).init();
+	public static final Block ICE_STONE = new BlockBase("ice_stone", new BlockBaseProperties(Material.ICE).hardnessAndResistance(2f, 2f).sound(SoundType.STONE)).init();
+	public static final Block STONE_TRAPDOOR = new BlockBaseTrapdoor(new BlockBaseProperties(Material.ROCK).hardness(1.5f)).setRegistryName(location("stone_trapdoor"));
 	
 	/**
 	 * {@link ItemBlock}s (Initialized as {@link Item}s)
@@ -83,6 +90,11 @@ public class BlockInit {
 	public static final Item red_concrete_bricks = new ItemBase(RED_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item black_concrete_bricks = new ItemBase(BLACK_CONCRETE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item stone_door = new ItemBase(STONE_DOOR, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item ruby_door = new ItemBase(RUBY_DOOR, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item sandstone_bricks = new ItemBase(SANDSTONE_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item burned_bricks = new ItemBase(BURNED_BRICKS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item ice_stone = new ItemBase(ICE_STONE, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item stone_trapdoor = new ItemBase(STONE_TRAPDOOR, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	
 	/**
 	 * Special Section
@@ -105,6 +117,12 @@ public class BlockInit {
 		BLOCKS.add(BARS_PLUS);
 		BLOCKS.add(BARS_CHAIN);
 		BLOCKS.add(BARS_STONE);
+		BLOCKS.add(RUBY_DOOR);
 		BLOCKS.add(STONE_DOOR);
+		BLOCKS.add(STONE_TRAPDOOR);
+	}
+	
+	private static ResourceLocation location(String name) {
+		return new ResourceLocation(Main.modid, name);
 	}
 }

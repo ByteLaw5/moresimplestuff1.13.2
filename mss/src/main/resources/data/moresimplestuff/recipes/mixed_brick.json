@@ -11,19 +11,19 @@
  	{
  		"D":
  		{
- 			"item": "minecraft:brick"
+ 			"item": "minecraft:bricks"
  		},
  		
  		
  		"B":
  		{
- 			"item": "moreblocks:burned_brick"
+ 			"item": "moresimplestuff:burned_bricks"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:mixed",
+ 		"item": "moresimplestuff:mixed_bricks",
  		"count": 4
  	}
 }

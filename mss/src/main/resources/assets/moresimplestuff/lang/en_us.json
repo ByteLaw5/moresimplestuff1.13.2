@@ -10,6 +10,7 @@
 	"item.moresimplestuff.fire_ammo": "Lava Ammo",
 	"item.moresimplestuff.ice_ghast_spawn": "Ice Ghast Spawn Egg",
 	"item.moresimplestuff.scutum_shield": "Scutum Shield",
+	"item.moresimplestuff.ice_ghast_tear": "Ice Ghast Tear",
 	
 	"block.moresimplestuff.stone_tile": "Stone Tile",
 	"block.moresimplestuff.mixed_bricks": "Mixed Bricks",
@@ -40,6 +41,11 @@
 	"block.moresimplestuff.bars_chain": "Chain Link Bars",
 	"block.moresimplestuff.bars_stone": "Stone Bars",
 	"block.moresimplestuff.stone_door": "Stone Door",
+	"block.moresimplestuff.ruby_door": "Ruby Door",
+	"block.moresimplestuff.sandstone_bricks": "Sandstone Bricks",
+	"block.moresimplestuff.burned_bricks": "Burned Bricks",
+	"block.moresimplestuff.stone_trapdoor": "Stone Trapdoor",
+	"block.moresimplestuff.ice_stone": "Ice Stone",
 	
 	"item.moresimplestuff.diving_helmet": "Diving Helmet",
 	"item.moresimplestuff.diving_boots": "Diving Boots",

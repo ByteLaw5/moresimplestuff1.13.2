@@ -11,14 +11,13 @@
  	{
  		"D":
  		{
- 			"item": "minecraft:concrete",
- 			"data": 2
+ 			"item": "minecraft:magenta_concrete"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:magenta_concrete_bricks",
+ 		"item": "moresimplestuff:magenta_concrete_bricks",
  		"count": 4
  	}
 }

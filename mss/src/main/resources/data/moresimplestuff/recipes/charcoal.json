@@ -10,14 +10,13 @@
  	{
  		"#":
  		{
- 			"item": "moreblocks:charcoal_block"
+ 			"item": "moresimplestuff:charcoal_block"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "minecraft:coal",
-		"data": 1,
+ 		"item": "minecraft:charcoal",
  		"count": 9
  	}
 }

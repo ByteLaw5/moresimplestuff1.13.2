@@ -11,14 +11,13 @@
  	{
  		"D":
  		{
- 			"item": "minecraft:stone",
-			"data": 4
+ 			"item": "minecraft:diorite"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:diorite_bricks",
+ 		"item": "moresimplestuff:diorite_bricks",
  		"count": 4
  	}
 }

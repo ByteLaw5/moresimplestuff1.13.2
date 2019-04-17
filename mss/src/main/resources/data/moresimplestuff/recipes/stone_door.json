@@ -12,14 +12,13 @@
  	{
  		"#":
  		{
- 			"item": "minecraft:stone",
-			"data": 0
+ 			"item": "minecraft:stone"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:stone_door",
+ 		"item": "moresimplestuff:stone_door",
  		"count": 3
  	}
 }

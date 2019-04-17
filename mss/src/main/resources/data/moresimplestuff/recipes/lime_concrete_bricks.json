@@ -11,14 +11,13 @@
  	{
  		"D":
  		{
- 			"item": "minecraft:concrete",
- 			"data": 5
+ 			"item": "minecraft:lime_concrete"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:lime_concrete_bricks",
+ 		"item": "moresimplestuff:lime_concrete_bricks",
  		"count": 4
  	}
 }

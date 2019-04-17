@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 public class BlockQuickSand extends BlockFalling {
 	
-	public static final DamageSource QUICK_SAND = new CustomDamageSource("quickSand");
+	public static final DamageSource QUICK_SAND = new CustomDamageSource("quickSand", "death.attack.quick_sand");
 
 	public BlockQuickSand(BlockBaseProperties props) {
 		super(props.getProps());

@@ -12,14 +12,13 @@
  	{
  		"D":
  		{
- 			"item": "minecraft:concrete",
- 			"data": 7
+ 			"item": "minecraft:gray_concrete"
  		}
  	},
  	
  	"result":
  	{
- 		"item": "moreblocks:gray_concrete_bricks",
+ 		"item": "moresimplestuff:gray_concrete_bricks",
  		"count": 4
  	}
 }
