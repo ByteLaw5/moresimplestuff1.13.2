@@ -9,5 +9,5 @@ public enum ItemBaseType {
 	food,
 	special,
 	spawnegg,
-	drink;
+	drink
 }

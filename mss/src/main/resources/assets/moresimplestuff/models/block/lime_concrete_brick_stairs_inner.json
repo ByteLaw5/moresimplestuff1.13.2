@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "moresimplestuff:blocks/lime_concrete_bricks",
+		"top": "moresimplestuff:blocks/lime_concrete_bricks",
+		"side": "moresimplestuff:blocks/lime_concrete_bricks"
+	}
+}

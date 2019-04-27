@@ -35,7 +35,7 @@ public class FireStaff extends Staff {
 		worldIn.spawnEntity(fireball);
 		
 		item.damageItem(1, playerIn);
-		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
+		return new ActionResult<>(EnumActionResult.SUCCESS, item);
 	}
 
 	@Override

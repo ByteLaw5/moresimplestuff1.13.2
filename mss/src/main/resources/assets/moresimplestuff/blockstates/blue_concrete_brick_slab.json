@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "moresimplestuff:block/blue_concrete_brick_slab_bottom" },
+    "type=top": { "model": "moresimplestuff:block/blue_concrete_brick_slab_top" },
+    "type=double": { "model": "moresimplestuff:block/blue_concrete_bricks" }
+  }
+}

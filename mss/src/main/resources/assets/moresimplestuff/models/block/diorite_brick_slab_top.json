@@ -1,0 +1,9 @@
+{
+    "parent": "block/slab_top",
+    "textures":
+    {
+        "bottom": "moresimplestuff:blocks/diorite_bricks",
+        "top": "moresimplestuff:blocks/diorite_bricks",
+        "side": "moresimplestuff:blocks/diorite_bricks"
+    }
+}

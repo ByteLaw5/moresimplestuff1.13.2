@@ -36,6 +36,7 @@ public class ItemInit {
 	public static final Item ICE_AMMO = new ItemBase("ice_ammo", new ItemBaseProperties().tab(Main.mssitems)).init();
 	public static final Item FIRE_AMMO = new ItemBase("fire_ammo", new ItemBaseProperties().tab(Main.mssitems)).init();
 	public static final Item ICE_GHAST_TEAR = new ItemBase("ice_ghast_tear", new ItemBaseProperties().tab(Main.mssitems)).init();
+	public static final Item BURNED_BRICK = new ItemBase("burned_bricks", new ItemBaseProperties().tab(Main.mssitems)).init();
 	              
 	/**            
 	 * {@link ItemArmor}s
@@ -55,7 +56,7 @@ public class ItemInit {
 	public static final Item CORN = new ItemBase("corn", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 2.0f, 3, false).init();
 	public static final Item BAKED_CORN = new ItemBase("baked_corn", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 5.0f, 8, false).init();
 	public static final Item GRAPE = new ItemBase("grape", new ItemBaseProperties(ItemBaseType.food).tab(Main.mssitems), 1.0f, 4, false).init();
-	public static final Item WINE = new ItemBase("wine", new ItemBaseProperties(ItemBaseType.drink).tab(Main.mssitems), new PotionEffect(MobEffects.NAUSEA, 200, 0, false, false), new PotionEffect(MobEffects.STRENGTH, 200, 1, false, false)).init();
+	public static final Item WINE = new ItemBase("wine", new ItemBaseProperties(ItemBaseType.drink).tab(Main.mssitems), new PotionEffect(MobEffects.NAUSEA, 1200, 0, false, false), new PotionEffect(MobEffects.STRENGTH, 1200, 1, false, false)).init();
 	
 	/**
 	 * {@link ItemSpawnEgg}s

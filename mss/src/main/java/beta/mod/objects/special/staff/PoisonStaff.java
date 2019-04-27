@@ -29,7 +29,7 @@ public class PoisonStaff extends Staff {
 		ItemStack neededAmmo = new ItemStack(ItemInit.POISON_AMMO);
 		if(ammo == ItemStack.EMPTY || !ItemStack.areItemsEqual(ammo, neededAmmo)) {
 			playerIn.sendMessage(new TextComponentTranslation("\u00A76" + "You need to have ammo in your offhand!"));
-			return new ActionResult<ItemStack>(EnumActionResult.FAIL, item);
+			return new ActionResult<>(EnumActionResult.FAIL, item);
 		} else if(ItemStack.areItemsEqual(ammo, neededAmmo)) {
 			ammo.shrink(1);
 			Vec3d aim = playerIn.getLookVec();
@@ -43,9 +43,9 @@ public class PoisonStaff extends Staff {
 			worldIn.spawnEntity(poison);
 			
 			item.damageItem(1, playerIn);
-			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
+			return new ActionResult<>(EnumActionResult.SUCCESS, item);
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.FAIL, item);
+		return new ActionResult<>(EnumActionResult.FAIL, item);
 	}
 
 	@Override

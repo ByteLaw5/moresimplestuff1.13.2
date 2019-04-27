@@ -16,8 +16,12 @@ import net.minecraft.world.World;
  * The {@code abstract} class that is a {@code super}ior to all staffs.
  */
 public abstract class Staff extends Item {
-	public Staff(ItemBaseProperties props) {
+	protected Staff(ItemBaseProperties props) {
 		super(props.getProps().defaultMaxDamage(400));
+	}
+
+	protected Staff(ItemBaseProperties props, int maxDamage) {
+		super(props.getProps().defaultMaxDamage(maxDamage));
 	}
 	
 	@Override

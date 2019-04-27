@@ -18,13 +18,14 @@ public enum ArmorMaterialList implements IArmorMaterial {
 	private Item repairItem;
 	private float toughness;
 	
-	private ArmorMaterialList(String name, int durability, int[] reduction, int enchantability, Item repair, String equip, float toughness) {
+	ArmorMaterialList(String name, int durability, int[] reduction, int enchantability, Item repair, String equip, float toughness) {
 		this.name = name;
 		this.durability = durability;
 		damageReduction = reduction;
 		this.enchantability = enchantability;
 		repairItem = repair;
 		this.toughness = toughness;
+		sound = equip;
 	}
 
 	@Override

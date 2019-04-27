@@ -69,7 +69,7 @@ public class ItemBase {
 				new ItemBaseArmor(props.getArmorMaterial(), EntityEquipmentSlot.FEET, props, effect2).setRegistryName(loc) : type == ItemBaseType.food ?
 				new ItemBaseFood(heal, saturation, isMeat, props.getProps(), effect).setRegistryName(loc) : type == ItemBaseType.spawnegg ?
 				new ItemSpawnEgg(props.getEntityType(), props.getPrimaryColor(), props.getSecondaryColor(), props.getProps()).setRegistryName(loc) : type == ItemBaseType.drink ?
-				new ItemBaseFood(0, 0f, false, props.getProps(), effect2, effect2_2).setRegistryName(loc) :
+				new ItemDrink(props, effect2, effect2_2).setRegistryName(loc) :
 				new Item(props.getProps()).setRegistryName(loc);
 		ItemInit.ITEMS.add(item);
 		return item;

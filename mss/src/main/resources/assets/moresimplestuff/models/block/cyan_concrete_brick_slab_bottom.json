@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "moresimplestuff:blocks/cyan_concrete_bricks",
+    "top": "moresimplestuff:blocks/cyan_concrete_bricks",
+    "side": "moresimplestuff:blocks/cyan_concrete_bricks"
+  }
+}

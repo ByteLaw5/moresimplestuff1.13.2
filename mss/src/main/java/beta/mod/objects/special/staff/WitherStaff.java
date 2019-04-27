@@ -34,7 +34,7 @@ public class WitherStaff extends Staff {
 		worldIn.spawnEntity(skull);
 		
 		item.damageItem(1, playerIn);
-		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
+		return new ActionResult<>(EnumActionResult.SUCCESS, item);
 	}
 
 	@Override

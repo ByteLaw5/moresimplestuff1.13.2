@@ -2,7 +2,7 @@ modLoader="javafml" #mandatory
 loaderVersion="[25,)" #mandatory (24 is current forge version)
 [[mods]] #mandatory
 modId="moresimplestuff" #mandatory
-version="0.8" #mandatory
+version="0.9" #mandatory
 displayName="More Simple Stuff" #mandatory
 credits="Creators of the original More Simple Stuff mod" #optional
 authors="Arad" #optional

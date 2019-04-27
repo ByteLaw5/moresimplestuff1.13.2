@@ -6,9 +6,15 @@ import net.minecraft.block.SoundType;
 
 public class BlockBaseProperties {
 	private Block.Properties props;
+	private BlockBaseType type;
+	
+	public BlockBaseProperties(Material mat, BlockBaseType type) {
+		props = Block.Properties.create(mat);
+		this.type = type;
+	}
 	
 	public BlockBaseProperties(Material mat) {
-		props = Block.Properties.create(mat);
+		this(mat, BlockBaseType.block);
 	}
 	
 	public BlockBaseProperties slipperiness(float slip) {
@@ -38,5 +44,9 @@ public class BlockBaseProperties {
 	
 	public Block.Properties getProps() {
 		return props;
+	}
+	
+	public BlockBaseType getType() {
+		return type;
 	}
 }

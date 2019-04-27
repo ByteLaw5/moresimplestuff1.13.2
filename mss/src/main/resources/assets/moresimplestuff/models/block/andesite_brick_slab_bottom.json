@@ -1,0 +1,9 @@
+{
+    "parent": "block/slab",
+    "textures":
+    {
+        "bottom": "moresimplestuff:blocks/andesite_bricks",
+        "top": "moresimplestuff:blocks/andesite_bricks",
+        "side": "moresimplestuff:blocks/andesite_bricks"
+    }
+}

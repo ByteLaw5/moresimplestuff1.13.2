@@ -35,7 +35,7 @@ public class EntityIceGhastProjectile extends EntityFireball {
 		if(result.entity instanceof EntityLivingBase) {
 			((EntityLivingBase)result.entity).addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 500, 4));
 			World worldIn = this.world;
-			worldIn.createExplosion(this, new EntityDamageSourceIndirect("frozen", this, this.shootingEntity), this.posX, this.posY, this.posZ, 2, false, true);
+			worldIn.createExplosion(this, new EntityDamageSourceIndirect("frozen", this, this.shootingEntity), this.posX, this.posY, this.posZ, 1, false, true);
 			this.remove();
 		} else {
 			BlockPos pos = result.getBlockPos().up();

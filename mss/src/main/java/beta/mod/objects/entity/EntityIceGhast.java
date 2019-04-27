@@ -10,7 +10,6 @@ import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.monster.EntityGhast;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -73,7 +72,7 @@ public class EntityIceGhast extends EntityGhast {
 	            World world = this.parentEntity.world;
 	            ++this.attackTimer;
 	            if (this.attackTimer == 10) {
-	               world.playEvent((EntityPlayer)null, 1015, new BlockPos(this.parentEntity), 0);
+	               world.playEvent(null, 1015, new BlockPos(this.parentEntity), 0);
 	            }
 
 	            if (this.attackTimer == 20) {
@@ -81,7 +80,7 @@ public class EntityIceGhast extends EntityGhast {
 	               double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.x * 4.0D);
 	               double d3 = entitylivingbase.getBoundingBox().minY + (double)(entitylivingbase.height / 2.0F) - (0.5D + this.parentEntity.posY + (double)(this.parentEntity.height / 2.0F));
 	               double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.z * 4.0D);
-	               world.playEvent((EntityPlayer)null, 1016, new BlockPos(this.parentEntity), 0);
+	               world.playEvent(null, 1016, new BlockPos(this.parentEntity), 0);
 	               EntityIceGhastProjectile entitylargefireball = new EntityIceGhastProjectile(world, this.parentEntity, d2, d3, d4);
 	               entitylargefireball.posX = this.parentEntity.posX + vec3d.x * 4.0D;
 	               entitylargefireball.posY = this.parentEntity.posY + (double)(this.parentEntity.height / 2.0F) + 0.5D;
