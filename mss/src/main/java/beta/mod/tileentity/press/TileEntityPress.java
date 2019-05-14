@@ -286,25 +286,6 @@ public class TileEntityPress extends TileEntity implements ITickable, IInteracti
 			return LazyOptional.empty();
 		}
 	}
-	
-	@SuppressWarnings("unchecked")
-	@Override
-	public <T> LazyOptional<T> getCapability(Capability<T> cap, EnumFacing side) {
-		if(!this.removed && cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side != null) {
-			switch(side) {
-			case NORTH:
-			case WEST:
-			case EAST:
-			case SOUTH:
-			case DOWN:
-			case UP:
-				return LazyOptional.of(() -> (T)handler);
-			default:
-				return LazyOptional.empty();
-			}
-		}
-		return LazyOptional.of(() -> (T)handler);
-	}
 
 	@Override
 	public ITextComponent getCustomName() {
