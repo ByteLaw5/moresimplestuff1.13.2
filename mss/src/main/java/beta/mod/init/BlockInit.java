@@ -14,6 +14,8 @@ import beta.mod.objects.special.BlockBars;
 import beta.mod.objects.special.BlockBaseDoor;
 import beta.mod.objects.special.BlockBaseTrapdoor;
 import beta.mod.objects.special.BlockQuickSand;
+import beta.mod.tileentity.barrel.BlockBarrel;
+import beta.mod.tileentity.press.BlockPress;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -95,6 +97,9 @@ public class BlockInit {
 	public static final Block GREEN_CONCRETE_BRICK_STAIRS = new BlockBase("green_concrete_brick_stairs", GREEN_CONCRETE_BRICKS.getDefaultState(), new BlockBaseProperties(Material.ROCK, BlockBaseType.stairs).hardness(1.5f)).init();
 	public static final Block RED_CONCRETE_BRICK_STAIRS = new BlockBase("red_concrete_brick_stairs", RED_CONCRETE_BRICKS.getDefaultState(), new BlockBaseProperties(Material.ROCK, BlockBaseType.stairs).hardness(1.5f)).init();
 	public static final Block BLACK_CONCRETE_BRICK_STAIRS = new BlockBase("black_concrete_brick_stairs", BLACK_CONCRETE_BRICKS.getDefaultState(), new BlockBaseProperties(Material.ROCK, BlockBaseType.stairs).hardness(1.5f)).init();
+	public static final Block BARREL = new BlockBarrel("barrel", new BlockBaseProperties(Material.WOOD, BlockBaseType.tileentity).hardnessAndResistance(2.0f, 2.0f).sound(SoundType.WOOD));
+	public static final Block PRESS_OFF = new BlockPress("press", new BlockBaseProperties(Material.WOOD, BlockBaseType.tileentity).sound(SoundType.WOOD), false);
+	public static final Block PRESS_ON = new BlockPress("press_on", new BlockBaseProperties(Material.WOOD, BlockBaseType.tileentity).sound(SoundType.WOOD), false);
 
 	/**
 	 * {@link ItemBlock}s (Initialized as {@link Item}s)
@@ -164,6 +169,9 @@ public class BlockInit {
 	public static final Item green_concrete_brick_stairs = new ItemBase(GREEN_CONCRETE_BRICK_STAIRS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item red_concrete_brick_stairs = new ItemBase(RED_CONCRETE_BRICK_STAIRS, new ItemBaseProperties().tab(Main.mssblocks)).init();
 	public static final Item black_concrete_brick_stairs = new ItemBase(BLACK_CONCRETE_BRICK_STAIRS, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item barrel = new ItemBase(BARREL, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item press_off = new ItemBase(PRESS_OFF, new ItemBaseProperties().tab(Main.mssblocks)).init();
+	public static final Item press_on = new ItemBase(PRESS_ON, new ItemBaseProperties()).init();
 
 	/**
 	 * Special Section

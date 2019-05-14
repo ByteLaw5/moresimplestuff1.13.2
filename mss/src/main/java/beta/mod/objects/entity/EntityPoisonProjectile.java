@@ -1,6 +1,6 @@
 package beta.mod.objects.entity;
 
-import beta.mod.Main;
+import beta.mod.init.ModET;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntitySkeleton;
@@ -18,16 +18,16 @@ import net.minecraft.world.World;
 
 public class EntityPoisonProjectile extends EntityFireball {
 	public EntityPoisonProjectile(World worldIn) {
-		super(Main.RegistryEvents.POISON_PROJ, worldIn, 1.0f, 1.0f);
+		super(ModET.POISON_PROJ, worldIn, 1.0f, 1.0f);
 		this.setSize(1.0f, 1.0f);
 	}
 	
 	public EntityPoisonProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.POISON_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.POISON_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
 	public EntityPoisonProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.POISON_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.POISON_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 
 	@Override

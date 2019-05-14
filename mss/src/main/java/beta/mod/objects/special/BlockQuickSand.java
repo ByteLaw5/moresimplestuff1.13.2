@@ -20,7 +20,6 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
 public class BlockQuickSand extends BlockFalling {
 	
 	public static final DamageSource QUICK_SAND = new CustomDamageSource("quickSand", "death.attack.quick_sand");

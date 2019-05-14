@@ -1,6 +1,6 @@
 package beta.mod.objects.entity;
 
-import beta.mod.Main;
+import beta.mod.init.ModET;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityFireball;
@@ -17,16 +17,16 @@ import net.minecraft.world.World;
 
 public class EntityIceProjectile extends EntityFireball {
 	public EntityIceProjectile(World worldIn) {
-		super(Main.RegistryEvents.ICE_PROJ, worldIn, 1.0f, 1.0f);
+		super(ModET.ICE_PROJ, worldIn, 1.0f, 1.0f);
 		this.setSize(1.0f, 1.0f);
 	}
 	
 	public EntityIceProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.ICE_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.ICE_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
 	public EntityIceProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.ICE_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.ICE_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
 	@Override

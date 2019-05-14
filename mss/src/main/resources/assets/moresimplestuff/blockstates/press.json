@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "moresimplestuff:block/press" },
+        "facing=south": { "model": "moresimplestuff:block/press", "y": 180 },
+        "facing=west":  { "model": "moresimplestuff:block/press", "y": 270 },
+        "facing=east":  { "model": "moresimplestuff:block/press", "y": 90 }
+	}
+}

@@ -83,6 +83,9 @@
 	"block.moresimplestuff.green_concrete_brick_stairs": "Green Concrete Brick Stairs",
 	"block.moresimplestuff.red_concrete_brick_stairs": "Red Concrete Brick Stairs",
 	"block.moresimplestuff.black_concrete_brick_stairs": "Black Concrete Brick Stairs",
+	"block.moresimplestuff.barrel": "Barrel",
+	"block.moresimplestuff.press": "Press",
+	"block.moresimplestuff.press_on": "Pressing Press",
 	
 	"item.moresimplestuff.diving_helmet": "Diving Helmet",
 	"item.moresimplestuff.diving_boots": "Diving Boots",
@@ -109,5 +112,8 @@
 	"entity.moresimplestuff.ice_proj": "Ice Projectile",
 	"entity.moresimplestuff.lava_proj": "Lava Projectile",
 	"entity.moresimplestuff.ice_ghast_proj": "Ice Projectile",
-	"entity.moresimplestuff.ice_ghast": "Ice Ghast"
+	"entity.moresimplestuff.ice_ghast": "Ice Ghast",
+	
+	"container.barrel": "Barrel",
+	"container.press": "Press"
 }

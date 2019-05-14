@@ -61,7 +61,7 @@ public class ItemInit {
 	/**
 	 * {@link ItemSpawnEgg}s
 	 */
-	public static final Item ICE_GHAST_SPAWN = new ItemBase("ice_ghast_spawn", new ItemBaseProperties(ItemBaseType.spawnegg).setEntityType(Main.RegistryEvents.ICE_GHAST).setPrimaryColor(0x00ffff).setSecondaryColor(0xf1f1f1).tab(Main.mssitems)).init();
+	public static final Item ICE_GHAST_SPAWN = new ItemBase("ice_ghast_spawn", new ItemBaseProperties(ItemBaseType.spawnegg).setEntityType(ModET.ICE_GHAST).setPrimaryColor(0x00ffff).setSecondaryColor(0xf1f1f1).tab(Main.mssitems)).init();
 	
 	/**
 	 * Special Section

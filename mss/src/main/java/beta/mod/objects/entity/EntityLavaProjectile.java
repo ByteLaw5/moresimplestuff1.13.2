@@ -1,6 +1,6 @@
 package beta.mod.objects.entity;
 
-import beta.mod.Main;
+import beta.mod.init.ModET;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityFireball;
@@ -17,16 +17,16 @@ import net.minecraft.world.World;
 
 public class EntityLavaProjectile extends EntityFireball {
 	public EntityLavaProjectile(World worldIn) {
-		super(Main.RegistryEvents.LAVA_PROJ, worldIn, 1.0f, 1.0f);
+		super(ModET.LAVA_PROJ, worldIn, 1.0f, 1.0f);
 		this.setSize(1.0f, 1.0f);
 	}
 	
 	public EntityLavaProjectile(World worldIn, double x, double y, double z, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.LAVA_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.LAVA_PROJ, x, y, z, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 	
 	public EntityLavaProjectile(World worldIn, EntityLivingBase shooter, double accelX, double accelY, double accelZ) {
-		super(Main.RegistryEvents.LAVA_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
+		super(ModET.LAVA_PROJ, shooter, accelX, accelY, accelZ, worldIn, 1.0f, 1.0f);
 	}
 
 	@Override

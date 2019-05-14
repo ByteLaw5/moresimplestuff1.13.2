@@ -2,8 +2,8 @@ package beta.mod.objects.entity;
 
 import java.util.Random;
 
-import beta.mod.Main;
 import beta.mod.init.LootTableInit;
+import beta.mod.init.ModET;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -25,7 +25,7 @@ public class EntityIceGhast extends EntityGhast {
 	
 	@Override
 	public EntityType<?> getType() {
-		return Main.RegistryEvents.ICE_GHAST;
+		return ModET.ICE_GHAST;
 	}
 	
 	@Override
